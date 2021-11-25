@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pdf table</title>
+        <link rel="stylesheet" href="/static/styles.css" />
+    </head>
+    <body>
+        <table class="table">
+            <tr class="t_header">
+                <th class="t_cell">Password</th>
+                <th class="t_cell">IP</th>
+                <th class="t_cell">SO</th>
+                <th class="t_cell">Version</th>
+            </tr>
+            {% for row in data %}
+            <tr class="t_row">
+                {% for cell in row %}
+                <td class="t_cell">{{ cell }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
